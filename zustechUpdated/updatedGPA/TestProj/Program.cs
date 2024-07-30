@@ -1,7 +1,13 @@
 ﻿/*The following code is used to find the GPA of six students in a class using their 
-credit scores, test scores and credit hours/cresit units
+credit scores, test scores, and credit hours/credit units
+Student - Student ID Number
+Chukwubuikem Modilim - 0390
+Esther Modebe - 7778
+Stanley Audu - 6200
+Seyi Omoniyi - 6937
+Adeleke Ali - 7759
+Leo Raphael - 0771
 */
-
 
 using System;
 using System.ComponentModel;
