@@ -56,7 +56,7 @@ if (studentId == null)
     switch (studentId)
     {
         case "0390":
-            studentName = "Chukwubuikem Modilim";
+            studentName = "Chukwubuikem Modilim H";
             mth101Score = "86";
             eng101Score = "85";
             gst101Score = "94";
