@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 GPA Calculator
 Overview
 The GPA Calculator is a simple yet effective tool designed for students 
@@ -16,3 +17,7 @@ Enable data export (e.g., save results as a CSV or PDF).
 Add mobile and web support.
 
 Contributions are welcome! Feel free to fork this repository, make changes, and submit a pull request.
+=======
+"# student-report-card" 
+"# student-report-card" 
+>>>>>>> f36dfda (I added these myself)
