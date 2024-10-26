@@ -1,5 +1,12 @@
 ﻿/*The following code is used to find the GPA of six students in a class using their 
-credit scores, test scores and credit hours/cresit units
+credit scores, test scores and credit hours/credit units
+Student - Student ID Number
+Chukwubuikem Modilim - 0390
+Esther Modebe - 7778
+Stanley Audu - 6200
+Seyi Omoniyi - 6937
+Adeleke Ali - 7759
+Leo Raphael - 0771
 */
 
 
@@ -39,93 +46,97 @@ int secondSemCredits = csc102Credit + eet102Credit + mth102Credit + stat104Credi
 // Code to display header and promp user to input student ID
 Console.WriteLine("Tophill School Report Card Checker\t2023/2024 Academic Session");
 Console.WriteLine("Please enter your School ID");
-studentId = Console.ReadLine();  
-
-// Assign student name and scores based on the entered student ID
-switch (studentId)
+studentId = Console.ReadLine();
+if (studentId == null)
 {
-    case "0390":
-        studentName = "Chukwubuikem Modilim";
-        mth101Score = "86";
-        eng101Score = "85";
-        gst101Score = "94";
-        phy101Score = "93";
-        csc101Score = "94";
-        csc102Score = "93";
-        eet102Score = "94";
-        mth102Score = "84";
-        stat104Score = "92";
-        calc101Score = "94";
-        break;
-    case "7778":
-        studentName = "Esther Modebe";
-        mth101Score = "92";
-        eng101Score = "64";
-        gst101Score = "74";
-        phy101Score = "84";
-        csc101Score = "94";
-        csc102Score = "75";
-        eet102Score = "64";
-        mth102Score = "75";
-        stat104Score = "54";
-        calc101Score = "94";
-        break;
-    case "6200":
-        studentName = "Stanley Audu";
-        mth101Score = "74";
-        eng101Score = "73";
-        gst101Score = "78";
-        phy101Score = "74";
-        csc101Score = "52";
-        csc102Score = "78";
-        eet102Score = "94";
-        mth102Score = "85";
-        stat104Score = "74";
-        calc101Score = "62";
-        break;
-    case "6937":
-        studentName = "Seyi Omoniyi";
-        mth101Score = "93";
-        eng101Score = "82";
-        gst101Score = "92";
-        phy101Score = "82";
-        csc101Score = "65";
-        csc102Score = "94";
-        eet102Score = "94";
-        mth102Score = "74";
-        stat104Score = "63";
-        calc101Score = "53";
-        break;
-    case "7759":
-        studentName = "Adeleke Ali";
-        mth101Score = "74";
-        eng101Score = "43";
-        gst101Score = "67";
-        phy101Score = "75";
-        csc101Score = "75";
-        csc102Score = "43";
-        eet102Score = "75";
-        mth102Score = "65";
-        stat104Score = "54";
-        calc101Score = "75";
-        break;
-    case "0771":
-        studentName = "Leo Raphael";
-        mth101Score = "34";
-        eng101Score = "84";
-        gst101Score = "54";
-        phy101Score = "43";
-        csc101Score = "48";
-        csc102Score = "69";
-        eet102Score = "35";
-        mth102Score = "58";
-        stat104Score = "35";
-        calc101Score = "66";
-        break;
-    default:
-        System.Console.WriteLine("Invalid entry");
-        break;
+    Console.WriteLine(" ");
 }
+  else
+    // Assign student name and scores based on the entered student ID
+    switch (studentId)
+    {
+        case "0390":
+            studentName = "Chukwubuikem Modilim";
+            mth101Score = "86";
+            eng101Score = "85";
+            gst101Score = "94";
+            phy101Score = "93";
+            csc101Score = "94";
+            csc102Score = "93";
+            eet102Score = "94";
+            mth102Score = "84";
+            stat104Score = "92";
+            calc101Score = "94";
+            break;
+        case "7778":
+            studentName = "Esther Modebe";
+            mth101Score = "92";
+            eng101Score = "64";
+            gst101Score = "74";
+            phy101Score = "84";
+            csc101Score = "94";
+            csc102Score = "75";
+            eet102Score = "64";
+            mth102Score = "75";
+            stat104Score = "54";
+            calc101Score = "94";
+            break;
+        case "6200":
+            studentName = "Stanley Audu";
+            mth101Score = "74";
+            eng101Score = "73";
+            gst101Score = "78";
+            phy101Score = "74";
+            csc101Score = "52";
+            csc102Score = "78";
+            eet102Score = "94";
+            mth102Score = "85";
+            stat104Score = "74";
+            calc101Score = "62";
+            break;
+        case "6937":
+            studentName = "Seyi Omoniyi";
+            mth101Score = "93";
+            eng101Score = "82";
+            gst101Score = "92";
+            phy101Score = "82";
+            csc101Score = "65";
+            csc102Score = "94";
+            eet102Score = "94";
+            mth102Score = "74";
+            stat104Score = "63";
+            calc101Score = "53";
+            break;
+        case "7759":
+            studentName = "Adeleke Ali";
+            mth101Score = "74";
+            eng101Score = "43";
+            gst101Score = "67";
+            phy101Score = "75";
+            csc101Score = "75";
+            csc102Score = "43";
+            eet102Score = "75";
+            mth102Score = "65";
+            stat104Score = "54";
+            calc101Score = "75";
+            break;
+        case "0771":
+            studentName = "Leo Raphael";
+            mth101Score = "34";
+            eng101Score = "84";
+            gst101Score = "54";
+            phy101Score = "43";
+            csc101Score = "48";
+            csc102Score = "69";
+            eet102Score = "35";
+            mth102Score = "58";
+            stat104Score = "35";
+            calc101Score = "66";
+            break;
+        default:
+            System.Console.WriteLine("Invalid entry");
+            break;
+    }
 
 // Convert score from string to integer
 int ConvertScore(string score)
@@ -171,8 +182,7 @@ int[] secondSemScores = new int[] { ConvertScore(csc102Score), ConvertScore(eet1
 
 int[] firstSemCreditsArr = new int[] { math101Credit, eng101Credit, gst101Credit, phy101Credit, csc101Credit };
 
-int[] secondSemCreditsArr = new int[]
-{csc102Credit,eet102Credit,mth102Credit,stat104Credit,calc101Credit};
+int[] secondSemCreditsArr = new int[] { csc102Credit, eet102Credit, mth102Credit, stat104Credit, calc101Credit };
 
 // Calculate CGPA for each semester and overall CGPA
 decimal firstSemCGPA = CalculateCGPA(firstSemScores, firstSemCreditsArr, firstSemCredits);
@@ -180,7 +190,7 @@ decimal secondSemCGPA = CalculateCGPA(secondSemScores, secondSemCreditsArr, seco
 decimal overallCGPA = (firstSemCGPA + secondSemCGPA) / 2;  // Average of both semesters
 
 // Display student information and grades
-decimal truncatedFirstSem = Math.Round(firstSemCGPA,2);
+decimal truncatedFirstSem = Math.Round(firstSemCGPA, 2);
 System.Console.WriteLine($"ID Number: {studentId} Student Name: {studentName}");
 System.Console.WriteLine($"First Semester Courses and Grades\t\tGPA: {truncatedFirstSem} out of 5.0\n");
 System.Console.WriteLine($"S/N\tSubjects\tScore\tGrade\tCredit\tRemark\n");
@@ -209,7 +219,7 @@ for (int i = 0; i < firstSemScores.Length; i++)
 }
 
 // Display second semester information and grades
-decimal truncatedSecSem = Math.Round(secondSemCGPA, 2); 
+decimal truncatedSecSem = Math.Round(secondSemCGPA, 2);
 System.Console.WriteLine($"Second Semester Courses\t\tGPA: {truncatedSecSem} out of 5.0\n");
 System.Console.WriteLine($"S/N\tSubjects\tScore\tGrade\tCredit\tRemark\n");
 for (int i = 0; i < secondSemScores.Length; i++)
