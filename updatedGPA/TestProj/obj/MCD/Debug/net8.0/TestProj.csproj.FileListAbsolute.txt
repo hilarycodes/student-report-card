@@ -26,3 +26,4 @@ C:\Users\onyinye umeche\Desktop\Coding Stuff\zustechUpdated\updatedGPA\TestProj\
 C:\Users\onyinye umeche\Desktop\Coding Stuff\zustechUpdated\updatedGPA\TestProj\obj\MCD\Debug\net8.0\TestProj.pdb
 C:\Users\onyinye umeche\Desktop\Coding Stuff\zustechUpdated\updatedGPA\TestProj\obj\MCD\Debug\net8.0\TestProj.genruntimeconfig.cache
 C:\Users\onyinye umeche\Desktop\Coding Stuff\zustechUpdated\updatedGPA\TestProj\obj\MCD\Debug\net8.0\ref\TestProj.dll
+C:\Users\onyinye umeche\Desktop\Coding Stuff\zustechUpdated\updatedGPA\TestProj\obj\MCD\Debug\net8.0\TestProj.sourcelink.json

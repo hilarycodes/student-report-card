@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\onyinye umeche\\Desktop\\zustechUpdated\\updatedGPA\\TestProj\\TestProj.csproj": {}
+    "C:\\Users\\onyinye umeche\\Desktop\\Coding Stuff\\zustechUpdated\\updatedGPA\\TestProj\\TestProj.csproj": {}
   },
   "projects": {
-    "C:\\Users\\onyinye umeche\\Desktop\\zustechUpdated\\updatedGPA\\TestProj\\TestProj.csproj": {
+    "C:\\Users\\onyinye umeche\\Desktop\\Coding Stuff\\zustechUpdated\\updatedGPA\\TestProj\\TestProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\onyinye umeche\\Desktop\\zustechUpdated\\updatedGPA\\TestProj\\TestProj.csproj",
+        "projectUniqueName": "C:\\Users\\onyinye umeche\\Desktop\\Coding Stuff\\zustechUpdated\\updatedGPA\\TestProj\\TestProj.csproj",
         "projectName": "TestProj",
-        "projectPath": "C:\\Users\\onyinye umeche\\Desktop\\zustechUpdated\\updatedGPA\\TestProj\\TestProj.csproj",
+        "projectPath": "C:\\Users\\onyinye umeche\\Desktop\\Coding Stuff\\zustechUpdated\\updatedGPA\\TestProj\\TestProj.csproj",
         "packagesPath": "C:\\Users\\onyinye umeche\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\onyinye umeche\\Desktop\\zustechUpdated\\updatedGPA\\TestProj\\obj\\",
+        "outputPath": "C:\\Users\\onyinye umeche\\Desktop\\Coding Stuff\\zustechUpdated\\updatedGPA\\TestProj\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\onyinye umeche\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
