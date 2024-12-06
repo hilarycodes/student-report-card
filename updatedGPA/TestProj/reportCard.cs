@@ -141,17 +141,17 @@ if (studentId == null)
 // Convert score from string to integer
 int ConvertScore(string score)
 {
-    return int.TryParse(score, out int result) ? result : 0;  // Return 0 if conversion fails
+    return int.TryParse(score, out int result) ? result : 0;  
 }
 
 // Determine grade points based on score
-int GetGradeScoree(int score)
+int GetGradeScore(int score)
 {
     if (score >= 70) return 5;
     else if (score >= 60) return 4;
     else if (score >= 50) return 3;
     else if (score >= 45) return 2;
-    else return 0;  // scores below 45 will have a grade point of zero
+    else return 0;  
 }
 
 // Determine grade remark based on score
@@ -161,7 +161,7 @@ string GetGradeRemark(int score)
     if (score >= 60) return "Very Good";
     if (score >= 50) return "Good";
     if (score >= 45) return "Fair";
-    else return "Carry Over"; // Courses with scores below 45 will be carried over
+    else return "Carry Over"; 
 }
 
 // Calculate CGPA based on scores and credits and total credits
@@ -170,7 +170,7 @@ decimal CalculateCGPA(int[] scores, int[] credits, int totalCredits)
     int totalGradePoints = 0;
     for (int i = 0; i < scores.Length; i++)
     {
-        totalGradePoints += GetGradeScoree(scores[i]) * credits[i];  // Calculate total grade points
+        totalGradePoints += GetGradeScore(scores[i]) * credits[i];  // Calculate total grade points
     }
     return (decimal)totalGradePoints / totalCredits;  // Return CGPA
 }
@@ -233,7 +233,7 @@ for (int i = 0; i < secondSemScores.Length; i++)
         4 => "CAL 101",
         _ => ""
     };
-    string grade = GetGradeScoree(secondSemScores[i]) switch
+    string grade = GetGradeScore(secondSemScores[i]) switch
     {
         5 => "A",
         4 => "B",
