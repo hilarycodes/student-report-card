@@ -50,7 +50,6 @@ namespace ReportCard
                 Console.WriteLine(" ");
             }
             else
-                // Assign student name and scores based on the entered student ID
                 switch (studentId)
                 {
                     case "0390":
@@ -132,18 +131,18 @@ namespace ReportCard
                         calc101Score = "66";
                         break;
                     default:
-                        System.Console.WriteLine("Invalid entry");
+                        Console.WriteLine("Invalid entry");
                         break;
                 }
 
             // Convert score from string to integer
-            int ConvertScore(string score)
+            int ConvertScoreToInt(string score)
             {
                 return int.TryParse(score, out int result) ? result : 0;
             }
 
             // Determine grade points based on score
-            int GetGradeScore(int score)
+            int AssignGradePoint(int score)
             {
                 if (score >= 70) return 5;
                 else if (score >= 60) return 4;
@@ -153,7 +152,7 @@ namespace ReportCard
             }
 
             // Determine grade remark based on score
-            string GetGradeRemark(int score)
+            string AssignGradeRemark(int score)
             {
                 if (score >= 70) return "Excellent";
                 if (score >= 60) return "Very Good";
@@ -168,30 +167,43 @@ namespace ReportCard
                 int totalGradePoints = 0;
                 for (int i = 0; i < scores.Length; i++)
                 {
-                    totalGradePoints += GetGradeScore(scores[i]) * credits[i];  // Calculate total grade points
+                    // Calculate total grade points
+                    totalGradePoints += AssignGradePoint(scores[i]) * credits[i];
                 }
-                return (decimal)totalGradePoints / totalCredits;  // Return CGPA
+                return (decimal)totalGradePoints / totalCredits;
             }
 
             // Arrays to store scores and credits for each semester
-            int[] firstSemScores = new int[] { ConvertScore(mth101Score), ConvertScore(eng101Score), ConvertScore(gst101Score), ConvertScore(phy101Score), ConvertScore(csc101Score) };
+            int[] firstSemScores = new int[] {
+                                                ConvertScoreToInt(mth101Score),
+                                                ConvertScoreToInt(eng101Score),
+                                                ConvertScoreToInt(gst101Score),
+                                                ConvertScoreToInt(phy101Score),
+                                                ConvertScoreToInt(csc101Score)
+                                                };
 
-            int[] secondSemScores = new int[] { ConvertScore(csc102Score), ConvertScore(eet102Score), ConvertScore(mth102Score), ConvertScore(stat104Score), ConvertScore(calc101Score) };
+            int[] secondSemScores = new int[] { 
+                                                ConvertScoreToInt(csc102Score), 
+                                                ConvertScoreToInt(eet102Score), 
+                                                ConvertScoreToInt(mth102Score), 
+                                                ConvertScoreToInt(stat104Score), 
+                                                ConvertScoreToInt(calc101Score) 
+                                                };
 
-            int[] firstSemCreditsArr = new int[] { math101Credit, eng101Credit, gst101Credit, phy101Credit, csc101Credit };
+            int[] firstSemesterCredits = new int[] { math101Credit, eng101Credit, gst101Credit, phy101Credit, csc101Credit };
 
-            int[] secondSemCreditsArr = new int[] { csc102Credit, eet102Credit, mth102Credit, stat104Credit, calc101Credit };
+            int[] secondSemesterCredits = new int[] { csc102Credit, eet102Credit, mth102Credit, stat104Credit, calc101Credit };
 
             // Calculate CGPA for each semester and overall CGPA
-            decimal firstSemCGPA = CalculateCGPA(firstSemScores, firstSemCreditsArr, firstSemCredits);
-            decimal secondSemCGPA = CalculateCGPA(secondSemScores, secondSemCreditsArr, secondSemCredits);
-            decimal overallCGPA = (firstSemCGPA + secondSemCGPA) / 2;  // Average of both semesters
+            decimal firstSemCGPA = CalculateCGPA(firstSemScores, firstSemesterCredits, firstSemCredits);
+            decimal secondSemCGPA = CalculateCGPA(secondSemScores, secondSemesterCredits, secondSemCredits);
+            decimal overallCGPA = (firstSemCGPA + secondSemCGPA) / 2;
 
             // Display student information and grades
-            decimal truncatedFirstSem = Math.Round(firstSemCGPA, 2);
-            System.Console.WriteLine($"ID Number: {studentId} Student Name: {studentName}");
-            System.Console.WriteLine($"First Semester Courses and Grades\t\tGPA: {truncatedFirstSem} out of 5.0\n");
-            System.Console.WriteLine($"S/N\tSubjects\tScore\tGrade\tCredit\tRemark\n");
+            decimal truncatedFirstSemester = Math.Round(firstSemCGPA, 2);
+            Console.WriteLine($"ID Number: {studentId} Student Name: {studentName}");
+            Console.WriteLine($"First Semester Courses and Grades\t\tGPA: {truncatedFirstSemester} out of 5.0\n");
+            Console.WriteLine($"S/N\tSubjects\tScore\tGrade\tCredit\tRemark\n");
             for (int i = 0; i < firstSemScores.Length; i++)
             {
                 string subjectCode = i switch
@@ -212,14 +224,14 @@ namespace ReportCard
                     0 => "F",
                     _ => ""
                 };
-                string remark = GetGradeRemark(firstSemScores[i]);
-                System.Console.WriteLine($"{i + 1}.\t{subjectCode}:\t{firstSemScores[i]}\t{grade}\t{firstSemCreditsArr[i]}\t{remark}");
+                string remark = AssignGradeRemark(firstSemScores[i]);
+                Console.WriteLine($"{i + 1}.\t{subjectCode}:\t{firstSemScores[i]}\t{grade}\t{firstSemesterCredits[i]}\t{remark}");
             }
 
             // Display second semester information and grades
             decimal truncatedSecSem = Math.Round(secondSemCGPA, 2);
-            System.Console.WriteLine($"Second Semester Courses\t\tGPA: {truncatedSecSem} out of 5.0\n");
-            System.Console.WriteLine($"S/N\tSubjects\tScore\tGrade\tCredit\tRemark\n");
+            Console.WriteLine($"Second Semester Courses\t\tGPA: {truncatedSecSem} out of 5.0\n");
+            Console.WriteLine($"S/N\tSubjects\tScore\tGrade\tCredit\tRemark\n");
             for (int i = 0; i < secondSemScores.Length; i++)
             {
                 string subjectCode = i switch
@@ -231,7 +243,7 @@ namespace ReportCard
                     4 => "CAL 101",
                     _ => ""
                 };
-                string grade = GetGradeScore(secondSemScores[i]) switch
+                string grade = AssignGradePoint(secondSemScores[i]) switch
                 {
                     5 => "A",
                     4 => "B",
@@ -240,11 +252,11 @@ namespace ReportCard
                     0 => "F",
                     _ => ""
                 };
-                string remark = GetGradeRemark(secondSemScores[i]);
-                System.Console.WriteLine($"{i + 1}.\t{subjectCode}\t\t{secondSemScores[i]}\t{grade}\t{secondSemCreditsArr[i]}\t{remark}");
+                string remark = AssignGradeRemark(secondSemScores[i]);
+                Console.WriteLine($"{i + 1}.\t{subjectCode}\t\t{secondSemScores[i]}\t{grade}\t{secondSemesterCredits[i]}\t{remark}");
             }
-            decimal truncatedOverallCGPA = Math.Round(overallCGPA, 3);
-            System.Console.WriteLine($"OVERALL GPA: {truncatedOverallCGPA}/5");
+            decimal truncatedOverallCGPA = Math.Round(overallCGPA, 2);
+            Console.WriteLine($"OVERALL GPA: {truncatedOverallCGPA}/5");
         }
     }
 }
