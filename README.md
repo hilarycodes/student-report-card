@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 GPA Calculator
 Overview
 The GPA Calculator is a simple yet effective tool designed for students 
@@ -21,3 +22,7 @@ Contributions are welcome! Feel free to fork this repository, make changes, and 
 "# student-report-card" 
 "# student-report-card" 
 >>>>>>> f36dfda (I added these myself)
+=======
+"# student-report-card" 
+"# student-report-card" 
+>>>>>>> 2dc2dba03a186f1caa789b2a4dfdd93101775efa
