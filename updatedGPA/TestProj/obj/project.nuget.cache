@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "GJjqbfpbF64=",
+=======
   "dgSpecHash": "rYRxH2uxejk=",
+>>>>>>> 2dc2dba03a186f1caa789b2a4dfdd93101775efa
   "success": true,
   "projectFilePath": "C:\\Users\\onyinye umeche\\Desktop\\Coding Stuff\\zustechUpdated\\updatedGPA\\TestProj\\TestProj.csproj",
   "expectedPackageFiles": [],
